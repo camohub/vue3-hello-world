@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 
 
 const about = () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-const contact = () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+const contact = () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
 
 
 
@@ -24,11 +24,11 @@ const routes = [
     component: about
   },
   {
-    path: '/contact',
-    name: 'Contact',
+    path: '/search',
+    name: 'Search',
     component: contact,
     props: {
-      title: 'Contact',
+      title: 'iTunes search',
       test: 'Some test value',
     }
   }

@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img id="logo" alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
+
 
 <script>
 // @ is an alias to /src
@@ -16,3 +17,11 @@ export default {
   }
 }
 </script>
+
+
+<style lang="scss" scoped>
+  #logo {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
