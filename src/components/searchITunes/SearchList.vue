@@ -28,13 +28,16 @@
 <script>
     export default {
         props: {
-            searchResult: Array, 
+            
         },
         data() {
             return {
-                
+                searchResult: [],
             }
         },
+        mounted() {
+            window.mitt.on('onSearch', (data) => this.searchResult = data);
+        }
     }
 </script>
 

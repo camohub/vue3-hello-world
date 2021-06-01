@@ -13,6 +13,11 @@
   import MainMenu from '@/components/MainMenu.vue';
 
   export default {
+    data() {
+      return {
+          searchResult: []
+      }
+    },
     components: {
       MainMenu,
     }

@@ -21,7 +21,7 @@
         data() {
             return {
                 searchVal: '', 
-                hasError: false,           
+                hasError: false,
             }
         },
         methods: {
@@ -38,20 +38,14 @@
                 axios.get(url)
                     .then((response) => { 
                         console.log(response);
-                        this.$emit('onSearchResult', response.data.results);
+                        window.mitt.emit('onSearch', response.data.results);
                     })
                     .catch((respose) => {
                         console.log(respose);
                         this.hasError = true;
                     });
             },
-        },
-        // Events
-        emits: {
-            onSearchResult: (data) => {
-                return data;
-            },
-        }    
+        },   
     }
 </script>
 

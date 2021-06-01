@@ -2,9 +2,9 @@
     <div class="row">
         <h1 class="col-12">{{ title }}</h1>
 
-        <SearchForm @onSearchResult="setSearchResult" />
+        <SearchForm />
 
-        <SearchList :searchResult="searchResult" />
+        <SearchList />
     </div>    
 </template>
 
@@ -22,13 +22,9 @@
         },
         data() {
             return {
-                searchResult: [],
             }
         },
         methods: {
-            setSearchResult(data) {
-                this.searchResult = data;
-            }
         },
         components: {
             SearchForm, 
